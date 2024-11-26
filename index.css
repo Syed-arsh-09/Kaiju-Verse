@@ -1,0 +1,542 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #1f1e30;
+    color: #ffffff;
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    padding: 0;
+    background-image: url(/Images/background-img.avif);
+}
+
+/*Style for header*/
+.header {
+    display: flex;
+    background-color: #02031fbe;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    width: 100vw; 
+    position: absolute; 
+    z-index: 1;
+}
+
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    flex-grow: 1;
+
+}
+
+.logo {
+    width: 50px; 
+    height: auto; 
+    margin-right: 10px;
+}
+
+.website-name {
+    color: white;
+    font-size: 36px; 
+    font-family: 'Arial', sans-serif; 
+    flex-grow: 1;
+    text-align: center;
+}
+
+/* Styling for Profile Link */
+.profile {
+    display: inline-block;
+    padding: 8.5px 10px;
+    background-color: #ff44003e;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-family:Arial, Helvetica, sans-serif;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.profile:hover {
+    background-color: #ff4400c2;
+    transform: scale(1.03);
+}
+
+.profile:focus {
+    outline: none;
+    box-shadow: 0 0 0 4px rgba(72, 140, 222, 0.5);
+}
+
+/* Responsive Styling for smaller screens */
+@media screen and (max-width: 768px) {
+    .profile {
+        font-size: 1rem;
+        padding: 10px 20px;
+    }
+}
+
+
+.slide-fade {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+}
+
+video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+/* Quote styling */
+.quote-overlay {
+    position: absolute;
+    bottom: 25%;
+    left: 35%;
+    transform: translateX(-50%);
+    color: #fff;
+    font-size: 30px;
+    font-weight:500;
+    text-align: left;
+    line-height: 1.2;
+    font-family: "Comme", sans-serif;
+}
+
+/* Styling for the temporary quote author text */
+.videotemp {
+    font-size: 50px;
+    margin: 0;
+    font-weight: normal;
+    color: #fff;
+    font-family: "Comme", sans-serif;
+}
+
+.text-bg {
+    background: rgba(0, 0, 0, 0.5);
+    padding: 0px 10px;
+    border-radius: 0px 5px 5px 5px;
+    display: inline;
+}
+
+.text-hd {
+    background: rgba(0, 0, 0, 0.5);
+    padding: 0px 10px;
+    border-radius: 5px 5px 0px 0px;
+    display: inline;
+    font-weight: 500;
+}
+
+#authButton {
+    background-color: #ff44003e;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-left: 10px;
+}
+
+#authButton:hover {
+    background-color: #ff4400c2;
+    transform: scale(1.03);
+}
+
+/* SignIn/SignUp Styling */
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.modal-content {
+    background-color: #282c34;
+    border-radius: 10px;
+    padding: 20px;
+    width: 300px;
+    position: relative;
+}
+
+.close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    color: #ff8c00;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+button[type="submit"] {
+    background-color: #ff8c00;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+}
+
+button[type="submit"]:hover {
+    background-color: #ce3b36be;
+}
+
+#toggleLink {
+    color: #ccc;
+    cursor: pointer;
+    text-align: center;
+    margin-top: 10px;
+}
+
+#toggleLink:hover {
+    color: #ff8c00;
+}
+
+#forgotPassword {
+    color: #ccc;
+    cursor: pointer;
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 15px;
+    text-align: right;
+    font-size: 12px;
+}
+
+#forgotPassword:hover {
+    color: #ff8c00;
+}
+
+
+/* Search Section  */
+.search-container {
+    display: flex;
+    justify-content: center;
+}
+
+#searchInput {
+    padding: 10px;
+    width: 300px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+#searchtext{
+    font-size: 24px;
+    text-align: center;
+    text-shadow:2px 2px #3c3f48;
+}
+
+#searchButton {
+    padding: 10px;
+    margin-left: 10px;
+    background-color: #24324f;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#searchButton:hover {
+    background-color: #0a3061;
+}
+
+.anime-results {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+/* Anime Sections */
+.anime-section {
+    padding: 30px 40px 10px 40px;
+    text-align: center;
+    margin: 20px;
+}
+
+.anime-section h2 {
+    text-align: left;
+    color: #ccc;
+    font-size: 30px;
+}
+
+h2 {
+    color: #ff8c00;
+    margin-bottom: 20px;
+}
+
+/* Anime Grid */
+.anime-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 10px;
+}
+
+
+.anime-card img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.anime-card h3 {
+    margin: 10px;
+    font-size: 14px; 
+    color:#ccc ;
+}
+
+.anime-card {
+    position: relative; 
+    margin: 10px;
+    border: 1px solid #ccc; 
+    border-radius: 8px;
+    overflow: hidden; 
+    text-align: center; 
+    width: 150px;
+    height: 275px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.anime-card:hover {
+    display: block; 
+}
+
+
+.anime-card:hover .anime-info {
+    opacity: 1;
+}
+
+.anime-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+}
+
+/* Loader animation */
+.loading-indicator {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: white;
+    padding: 15px 30px;
+    border-radius: 8px;
+    z-index: 1000;
+}
+
+.loader {
+    border: 8px solid rgba(255, 255, 255, 0.3); 
+    border-top: 8px solid #ca3413; 
+    border-radius: 50%;
+    width: 40px; 
+    height: 40px; 
+    animation: spin 1s linear infinite;
+    margin-bottom: 10px; 
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Comunity Section */
+.community-section {
+    margin-top: 40px; 
+    padding: 20px;
+    background-color: #282c34; 
+    border-radius: 10px; 
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5); 
+}
+
+.comment-form {
+    margin-top: 20px;
+}
+
+textarea {
+    width: 100%;
+    height: 100px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    padding: 10px;
+    resize: none; 
+    background-color: #1f1e30; 
+    color: #ffffff;
+}
+
+#submitComment {
+    margin-top: 10px;
+    background-color: #ff8c00;
+    color: #ffffff;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+#submitComment:hover {
+    background-color: #c46e05; 
+    transform: scale(1.05); 
+}
+
+.comment {
+    margin: 15px 0;
+    background-color: #2c2f38;
+    border-radius: 5px;
+    padding: 10px;
+}
+
+.reply {
+    margin-left: 20px;
+    background-color: #3c3f48;
+}
+
+.comment p {
+    margin: 0;
+}
+
+.reply p {
+    font-style: italic;
+}
+
+/* Feedback Section */
+.feedback-section {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    padding: 40px;
+    background-color: #282c34; 
+    border-radius: 12px;
+    margin: 20px; 
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5); 
+    transition: transform 0.2s; 
+}
+
+.feedback-left {
+    flex: 1;
+    min-width: 300px;
+    padding: 20px;
+}
+
+.feedback-right {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.feedback-right img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 12px;
+}
+
+.feedback-section:hover {
+    transform: scale(1.02);
+}
+
+#feedbackInput {
+    width: 100%; 
+    height: 100px; 
+    border: 1px solid #ccc; 
+    border-radius: 5px; 
+    padding: 10px; 
+    margin-top: 10px;
+    transition: border-color 0.2s; 
+}
+
+#feedbackInput:focus {
+    border-color: #ff8c00; 
+}
+
+#submitFeedback {
+    background-color: #ff8c00;
+    color: white;
+    border: none;
+    padding: 10px 20px; 
+    border-radius: 5px; 
+    cursor: pointer;
+    margin-top: 10px;
+    transition: background-color 0.2s, transform 0.2s; 
+}
+
+#submitFeedback:hover {
+    background-color: #c46e05; 
+    transform: scale(1.05);
+}
+
+.feedback-message {
+    margin-top: 10px; 
+    color: #ff8c00; 
+    font-weight: bold; 
+}
+
+/* Social Section */
+.social-media-section {
+    text-align: center; 
+    margin: 20px; 
+}
+
+.social-media-section h2 {
+    color: #ff8c00; 
+}
+
+.social-links {
+    display: flex; 
+    justify-content: center; 
+    gap: 15px;
+}
+
+.social-icon {
+    background-color: #1f1e30; 
+    color: #ffffff; 
+    padding: 10px 15px; 
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.2s, transform 0.2s; 
+}
+
+.social-icon:hover {
+    background-color: #ff8c00;
+    transform: translateY(-3px); 
+}
+
+@media (max-width: 768px) {
+    .header, .anime-section, .community-section {
+        padding: 10px;
+    }
+    .logo {
+        width: 40px;
+    }
+    .website-name {
+        font-size: 24px;
+    }
+    h2 {
+        font-size: 1.5em;
+    }
+}

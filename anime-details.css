@@ -1,0 +1,129 @@
+/* Reset Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #1f1e30; 
+    color: #ffffff;
+    padding: 20px;
+}
+
+/* Anime Details */
+.anime-details-container {
+    max-width: 800px; 
+    margin: 0 auto; 
+    background-color: #282c34; 
+    border-radius: 10px; 
+    padding: 20px; 
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5); 
+}
+
+.anime-details-header {
+    text-align: center; 
+}
+
+.anime-details-header h1 {
+    color: #ff8c00; 
+    margin-bottom: 10px;
+}
+
+.anime-details-header img {
+    width: 100%; 
+    max-width: 300px; 
+    height: auto; 
+    border-radius: 10px; 
+}
+
+/* Content Styles */
+.anime-details-content {
+    margin-top: 20px; 
+}
+
+.anime-details-content h2 {
+    color: #ae1919; 
+    margin-top: 15px; 
+}
+
+.anime-details-content p {
+    color: #ccc; 
+    line-height: 1.6; 
+}
+
+/* Button Styles */
+#backButton {
+    background-color: #ce3b36be; 
+    color: white; 
+    border: none;
+    padding: 10px 15px; 
+    border-radius: 5px; 
+    cursor: pointer;
+    margin-top: 20px;
+    display: block; 
+    width: 100%; 
+}
+
+#backButton:hover {
+    background-color: #ff8c00;
+}
+.loading-indicator {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: white;
+    padding: 15px 30px;
+    border-radius: 8px;
+    z-index: 1000; 
+}
+
+.loader {
+    border: 8px solid rgba(255, 255, 255, 0.3); 
+    border-top: 8px solid #ca3413; 
+    border-radius: 50%;
+    width: 40px; 
+    height: 40px; 
+    animation: spin 1s linear infinite; 
+    margin-bottom: 10px;
+}
+
+/* Loader animation */
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+
+#animeDetails {
+    text-align: center;
+    margin: 20px auto;
+    width: 80%;
+    color: #ffffff;
+}
+
+#animeDetails h1 {
+    font-size: 28px;
+    margin-bottom: 15px;
+}
+
+#animeDetails img {
+    width: 300px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+#animeDetails p {
+    font-size: 16px;
+    margin: 8px 0;
+    color: #dcdcdc;
+}
+
+#animeDetails p strong {
+    color: #ff8c00;
+}

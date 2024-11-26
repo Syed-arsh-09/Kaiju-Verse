@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kaiju-Verse</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Comme:wght@100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <!-- header section -->
+    <header class="header">
+        <div class="logo-container">
+            <img src="/Images/Kaiju-verse Logo.png" alt="Kaiju-Verse Logo" class="logo" />
+            <h1 class="website-name">Kaiju-Verse</h1>
+            <a href="profile.html" class="profile">Profile</a>
+            <button id="authButton">Sign In / Up</button>
+        </div>
+    </header>
+    <!-- video and overlay -->
+    <div class="slide-fade">
+        <video autoplay muted loop>
+            <source src="/Videos/This is 4K Anime ｜ Garden Of Words ｜ Beauty Of 4k Anime.mp4" type="video/mp4">
+            Your browser does not support the video.
+        </video>
+        <div class="quote-overlay">
+            <p class="videotemp"><span class="text-hd">Kaiju-Verse</span></p>
+            <span class="text-bg">Discover. Connect. Immerse — Your Anime Journey Begins Here!</span>
+        </div>
+    </div> 
+
+    <!-- Sign In Form -->
+    <div id="authModal" class="modal" style="display: none;">
+        <div class="modal-content">
+            <span class="close" id="closeButton">&times;</span>
+    
+            <form id="signInForm" style="display: block;">
+                <h2>Sign In</h2>
+                <div class="form-group">
+                    <label for="signInUsername">Username:</label>
+                    <input type="text" id="signInUsername" required>
+                </div>
+                <div class="form-group">
+                    <label for="signInPassword">Password:</label>
+                    <input type="password" id="signInPassword" required>
+                </div>
+                <button type="submit">Sign In</button><br>
+                <p id="forgotPassword">Forgot Password?</p>
+                <p id="toggleToSignUp">Don't have an account? <span>Sign Up</span></p>
+            </form>
+    
+            <!-- Sign Up Form -->
+            <form id="signUpForm" style="display: none;">
+                <h2>Sign Up</h2>
+                <div class="form-group">
+                    <label for="signUpUsername">Username:</label>
+                    <input type="text" id="signUpUsername" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="signUpPassword">Password:</label>
+                    <input type="password" id="signUpPassword" required>
+                </div>
+                <button type="submit">Sign Up</button>
+                <br><br>
+                <p id="toggleToSignIn">Already have an account? <span>Sign In</span></p>
+            </form>
+        </div>
+    </div> 
+    <br>
+
+    <!-- Main Content -->
+    <main>
+        <p id="searchtext"><b>Looking for something of your taste, we got you covered <br>– dive into Kaiju-Verse!</b></p>
+         <br>
+        <div class="search-container">
+            <input type="text" id="searchInput" placeholder="Search by genre or anime title" />
+            <button id="searchButton">Search</button>
+        </div>
+        <div id="searchResults" class="anime-grid"></div>
+        
+        <!-- Additional sections -->
+        <div class="anime-section">
+            <h2>Weekly Popular !</h2>
+            <div id="weeklyPopular" class="anime-grid"></div>
+        </div>
+        
+        <div class="anime-section">
+            <h2>New Additions !</h2>
+            <div id="newAdditions" class="anime-grid"></div>
+        </div>
+        
+        <div class="anime-section">
+            <h2>Upcomings !</h2>
+            <div id="upcomingAnime" class="anime-grid"></div>
+        </div>
+        
+
+        <!-- Genre Sections -->
+        <section id="comedy" class="anime-section">
+            <h2>Comedy Anime !</h2>
+            <div class="anime-grid" id="comedyAnime"></div>
+        </section>
+
+        <section id="adventure" class="anime-section">
+            <h2>Adventure Anime !</h2>
+            <div class="anime-grid" id="adventureAnime"></div>
+        </section>
+
+        <section id="fantasy" class="anime-section">
+            <h2>Fantasy Anime !</h2>
+            <div class="anime-grid" id="fantasyAnime"></div>
+        </section>
+
+        <section id="horror" class="anime-section">
+            <h2>Horror Anime !</h2>
+            <div class="anime-grid" id="horrorAnime"></div>
+        </section>
+
+        <section id="sci-fi" class="anime-section">
+            <h2>Sci-Fi Anime !</h2>
+            <div class="anime-grid" id="sciFiAnime"></div>
+        </section>
+
+        <section id="mystery" class="anime-section">
+            <h2>Mystery Anime !</h2>
+            <div class="anime-grid" id="mysteryAnime"></div>
+        </section>
+
+        <section id="action" class="anime-section">
+            <h2>Action Anime !</h2>
+            <div class="anime-grid" id="actionAnime"></div>
+        </section>
+
+        <section id="romance" class="anime-section">
+            <h2>Romance Anime !</h2>
+            <div class="anime-grid" id="romanceAnime"></div>
+        </section>
+    </main>
+    <!-- homepage content -->
+
+<div class="community-section">
+    <h2>Community Comments</h2>
+    <div id="commentsSection">
+    </div>
+    <div class="comment-form">
+        <textarea id="commentInput" placeholder="Leave a comment..."></textarea>
+        <button id="submitComment">Submit</button>
+    </div>
+</div>
+<!-- feedback Section -->
+<section id="contact-feedback" class="feedback-section fade-in">
+    <div class="feedback-left">
+        <h2>We Value Your Feedback</h2>
+        <p>Have questions, suggestions, or feedback? We'd love to hear from you! <br>Please ignore the gif; it just looks cute 🥹.</p>
+        <form class="feedback-form"><br>
+            <textarea id="message" name="message" rows="6" placeholder="Share your thoughts or feedback..." required></textarea>
+            <br><br>
+            <button type="submit" class="submit-btn" id="submitFeedback">Send Feedback</button>
+        </form>
+        <p id="feedbackMessage"></p>
+    </div>
+    <div class="feedback-right">
+        <img src="/images/Programmer Day - Porforever.gif" alt="Feedback" loading="lazy">
+    </div>
+</section>
+
+
+<!-- social Media Section -->
+<div class="social-media-section">
+    <h2>Connect with Us</h2>
+    <div class="social-links">
+        <a href="https://www.facebook.com" target="_blank" class="social-icon">Facebook</a>
+        <a href="https://www.twitter.com" target="_blank" class="social-icon">Twitter</a>
+        <a href="https://www.instagram.com" target="_blank" class="social-icon">Instagram</a>
+    </div>
+</div>
+
+    <div id="loadingIndicator" class="loading-indicator" style="display: none;">
+        <div class="loader"></div>
+    </div>
+    <script src="index.js"></script>
+</body>
+</html>

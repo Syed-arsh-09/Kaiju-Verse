@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anime Details</title>
+    <link rel="stylesheet" href="anime-details.css"> 
+</head>
+<body>
+    <div class="anime-details-container">
+        <div class="anime-details-header">
+            <h1 id="animeTitle"></h1>
+            <img id="animeImage" alt="Anime Poster" />
+        </div>
+        <div class="anime-details-content">
+            <h2>Description</h2>
+            <p id="animeDescription"></p>
+            <h2>Rating</h2>
+            <p id="animeRating"></p>
+            <h2>Genres</h2>
+            <p id="animeGenres"></p>
+            <h2>Episodes</h2>
+            <p id="animeEpisodes"></p>
+            <h2>Seasons</h2>
+            <p id="animeSeasons"></p>
+            <h2>Available on</h2>
+            <p id="animePlatforms"></p>
+            <button id="backButton">Back</button>
+        </div>
+    </div>
+    <div id="loadingIndicator" class="loading-indicator" style="display: none;">
+        <div class="loader"></div>
+    </div>
+    <script src="anime-details.js"></script> 
+</body>
+</html>
